@@ -20,9 +20,9 @@ knit:   (
 
 ## Table of Contents
 
-### Data sources
+### Interpolation
 
-blah
+* **[Barometry](/shinyapps-manual/interpolation/barometry.html)**
 
 ### Data processing
 
