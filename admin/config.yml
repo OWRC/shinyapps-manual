@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: OWRC/shinyapps-manual
+  branch: main
+  site_domain: shinyapps-manual.netlify.app
+
+site_url: https://owrc.github.io/shinyapps-manual/
+
+media_folder: "images/uploads"
+
+collections:
+  - name: "Rmd Pages"
+    label: "Rmarkdown"
+    format: "yaml-frontmatter"
+    files:
+      - label: "Index"
+        name: "index"
+        file: "index.Rmd"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Markdown Pages"
+    label: "markdown"
+    files:
+      - label: "readme"
+        name: "readme"
+        file: "README.md"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+    
