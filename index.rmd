@@ -1,7 +1,8 @@
 ---
-title: Edit this wiki with Netlify CMS
+title: sHydrology
+subtitle: Hydrological timeseries analysis using R-Shiny
 date: "`r Sys.Date()`"
-author: Mason Marchildon
+author: Oak Riges Moraine Groundwater Program
 output:
   rmdformats::robobook:
     self_contained: true
@@ -16,11 +17,11 @@ output:
 
 # Introduction
 
-The [https://www.netlifycms.org](NetlifyCMS) looks really cool. Hope this works!
+The Oak Ridges Moraine Groundwater Program (ORMGP) hosts an [R-Shiny](https://shiny.rstudio.com/) server from which users are provided an interactive interface to timeseries analysis of data queried directly from our central database.
 
 # Goal
 
-Ideally, we'll end up with a page that is editable by non-git users via Netlify's point-and-click interface.
+In a series of pages, this will guide users on the many means of analysis included with sHydrology.
 
 # Code
 
