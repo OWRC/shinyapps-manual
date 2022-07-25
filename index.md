@@ -1,19 +1,12 @@
 ---
-title: sHydrology
-subtitle: Hydrological timeseries analysis using R-Shiny
-date: "`r Sys.Date()`"
-author: Oak Riges Moraine Groundwater Program
-output:
-  rmdformats::robobook:
-    self_contained: true
-    thumbnails: true
-    lightbox: true
-    gallery: false
-    highlight: tango
+title: R-Shiny apps
+subtitle: General description
+author: M.Marchildon
+output: html_document
 ---
 
-
-
+* TOC
+{:toc}
 
 # Introduction
 
@@ -65,3 +58,8 @@ This is a process of analysing a continuous time series signal to identify risin
 ## Long term trend analysis
 
 The next section of the...
+
+
+# Current Apps
+
+[sHydrology "Analysis" — stream flow analysis tools](legacy/sHydrologyAnalysis.html)
