@@ -10,9 +10,9 @@ output: html_document
 
 # Introduction
 
-The Oak Ridges Moraine Groundwater Program (ORMGP) hosts an [R-Shiny](https://shiny.rstudio.com/) server from which users are provided an interactive interface to timeseries analysis of data queried directly from our central database.
+The Oak Ridges Moraine Groundwater Program (ORMGP) hosts an [R-Shiny](https://shiny.rstudio.com/) server from which users are provided an interactive interface to time-series analysis of data queried directly from our central database.
 
-sHydrology is a set of dynamic hydrolgocial analyses packages written to improve access to environmental monitoring databases through a variety of workflows, statistics and perspectives.
+sHydrology is a set of dynamic hydrological analyses packages written to improve access to environmental monitoring databases through a variety of workflows, statistics and perspectives.
 
 # Philosophy
 
