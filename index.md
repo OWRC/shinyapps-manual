@@ -48,7 +48,7 @@ Upon changing the dygraph pane, the flow duration curve, monthly discharge and s
 
 ### Baseflow separation
 
-A common request from the groundwater community is an estimate of baseflow computed using automated hydrograph separation techniques. [Fourteen variants of hydrograph separation algorithms](/interpolants/modelling/hydrographseparation.html) are applied. (sHydrology relies on the median of daily estimates from these 14 variants.)
+A common request from the groundwater community is an estimate of baseflow computed using automated hydrograph separation techniques. [Fourteen variants of hydrograph separation algorithms](/info/hydrographseparation) are applied. (sHydrology relies on the median of daily estimates from these 14 variants.)
 
 ### Streamflow recession
 
