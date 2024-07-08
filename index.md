@@ -1,7 +1,6 @@
 ---
-title: R-Shiny apps
-subtitle: General description
-author: M.Marchildon
+title: sHydrology
+subtitle: A suite of R-Shiny apps built to analyse hydrological time-series data 
 output: html_document
 ---
 
@@ -10,54 +9,57 @@ output: html_document
 
 # Introduction
 
-The Oak Ridges Moraine Groundwater Program (ORMGP) hosts an [R-Shiny](https://shiny.rstudio.com/) server from which users are provided an interactive interface to time-series analysis of data queried directly from our central database.
+The Oak Ridges Moraine Groundwater Program (ORMGP) hosts an [R-Shiny](https://shiny.rstudio.com/) server from which users are provided an interactive interface to time-series analysis of data queried directly from the ORMGP central database.
+sHydrology is a set of dynamic hydrological analyses (e.g. workflows, statistics) packages written to improve access to the ORMGP database and more specifically, the long term environmental monitoring data it holds.
 
-sHydrology is a set of dynamic hydrological analyses packages written to improve access to environmental monitoring databases through a variety of workflows, statistics and perspectives.
 
-# Philosophy
+# Philosophy 
 
-The sHydrology web application provides a collection of analytical tools written to improve workflow at the ORMGP. These tools were scripted in R to replace our past/inefficient practice of querying data, cleaning/infilling data, re-formatting data, analysing and plotting data, output figures and tables every time we need to provide figure for reporting. While these tools can be found on [ORMGP web site](https://www.oakridgeswater.ca/), and the source code is [open and free](https://github.com/maseology/sHydrology), we are not developing an application for distribution and support, rather we are exposing our internal workflows to our partners. 
+The sHydrology web application provides a collection of analytical tools written to improve workflow at the ORMGP. These tools were scripted in R to facilitate and perhaps replace some earlier inefficient practices, including the querying data, cleaning/infilling data, re-formatting data, analysing and plotting data, and outputing figures and tables. While these tools can be found on the [ORMGP web site](https://www.oakridgeswater.ca/), and the source code is [open and free](https://github.com/OWRC/sHydrology), we are not developing an application for distribution and support, rather we are exposing our internal workflows to our partners.
 
 # Intent
-The sHydrology web packages originated from a set of scripts I had created over the years, mostly written in Basic. Recently I had begun to convert these scripts to R as it became apparent to me that the R community has so much to offer for comprehensive time series analysis. <!-- I work as a hydrologist whose interest is in long term hydrology at the regional (>10,000 km²) scale -->
+
+The sHydrology web packages originated from a set of scripts created by Mason Marchildon over the years, mostly written in Basic. Recently these scripts have been converted to R as it became apparent that the R community has a wealth of support to offer for comprehensive time series analysis. 
 
 
 # Goal
 
-In a series of pages, this will guide users on the many means of analysis included with sHydrology.
+The series of pages found here are designed to guide users on the many ways of analysing hydrology related data with sHydrology.
 
 
+# Tools
 
-# Versions
-
-1. **sHydrology** -- designed to analyse long term daily average stream flow data.
-1. **shyMet** -- designed to analyse long term daily average climate data.
-1. **sHdrograph** -- a general platform for time-series analysis, used specifically for groundwater monitoring.
-
+1. [**sHydrology**](https://github.com/OWRC/sHydrology) -- a web-map interface used to inspect ORMGP-maintained time series data.
+1. [**sHyStreamflow**](https://github.com/OWRC/sHyStreamflow) -- designed to analyse long term daily average stream flow data.
+2. **sHyClimate** -- designed to analyse long term daily average climate data.
+3. **sHydrograph** -- a general platform for time-series analysis, used specifically for groundwater monitoring.
 
 
 # Time-series
 
-The initial page that appears when opening a sHydrology page is the raw data. This is the most important page because off the bat, not only can one gain an appreciation for the period of record and the data quality, but the general character of the hydrograph can be inspected with a trained eye. 
+The initial page that appears when opening a sHyStreamflow/sHyClimate/sHydrograph page is the raw data. This is the most important page because off the bat, not only can one gain an appreciation for the period of record and the data quality, but the general character of the hydrograph can be inspected with a trained eye.
 
 The side bar (to the left of the page) offers some information on the station, such as station name, catchment area (where available), period of record, data quality and simple statistics. Options provided below allow the user to superimpose observation flags for additional quality assessment.
 
-This time-series is plotted using [dygraphs for R](https://rstudio.github.io/dygraphs/), which offers a dynamic means of zooming, scrolling and inspecting the time series. (Double-click anywhere returns to the default view.)
+This time-series is plotted using [dygraphs for R](https://rstudio.github.io/dygraphs/), which offers a dynamic means of zooming, scrolling and inspecting the time series data. (Double-click anywhere returns to the default view.)
 
 Upon changing the dygraph pane, the flow duration curve, monthly discharge and side panel information are updated automatically. This feature allows the user to examine the flow regime within a specified time period and compare against the entire period of record.
 
+
+## sHyStreamflow
+
 ### Baseflow separation
 
-A common request from the groundwater community is an estimate of baseflow computed using automated hydrograph separation techniques. [Fourteen variants of hydrograph separation algorithms](/info/hydrographseparation) are applied. (sHydrology relies on the median of daily estimates from these 14 variants.)
+A common request from the groundwater community is for an estimate of baseflow computed using automated hydrograph separation techniques. /info/hydrographseparation have been applied on the ORMGP website. (sHydrology relies on the median of daily estimates from these 14 variants.)
 
 ### Streamflow recession
 
-Much analysis that can be made on a streamflow hydrograph would be the location's [recession coefficient](/info/recessioncoefficient) $k$ in $ b_t=kb_{t-1} $. Here, $k$ is determined automatically for any temporal dataset.
+A significant understanding of stream behaviour is determined by the recession coefficient $(k)$ which is determined automatically for any streamflow time-series.
 
 
 ### Hydrograph disaggregation
 
-This is a process of analysing a continuous time series signal to identify rising limbs, falling limbs and recession periods. From this, additional information can be backed-out of the continuos data set by discretizing the hydrograph into discrete volumes associated with each peak. This allows the user to compare these "event yields" to local precipitation monitoring stations and inspect the quality of the basin's monitoring network.
+A process of analysing a continuous time series dataset to identify rising limbs, falling limbs and recession periods is revealed when users switch over to the disaggregation plot. From here, additional information can be backed-out of the continuous data set by discretizing the hydrograph into discrete volumes associated with each peak. This allows the user to compare these "event yields" to local precipitation monitoring stations and inspect the reliability of the stream’s watershed-wide monitoring network.
 
 
 <!-- ## Long term trend analysis
